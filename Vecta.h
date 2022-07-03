@@ -1,7 +1,7 @@
 // Lic:
 // Vecta.h
 // Vecta (header)
-// version: 22.07.02
+// version: 22.07.03
 // Copyright (C) 2022 Jeroen P. Broks
 // This software is provided 'as-is', without any express or implied
 // warranty.  In no event will the authors be held liable for any damages
@@ -31,8 +31,6 @@
 extern "C" {
 #endif
 
-static const unsigned int Earth_Etmaal = 86400;
-static const unsigned int Phantasar_Etmaal = 20000;
 
 typedef struct TimeEarth {
 	unsigned char
