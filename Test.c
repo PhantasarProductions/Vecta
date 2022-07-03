@@ -15,7 +15,7 @@
 // with basically comes down to the same lack of
 // restriction the public domain offers. (YAY!)
 // ***********************************************************
-// Version 22.07.02
+// Version 22.07.03
 // EndLic
 
 
@@ -29,10 +29,13 @@ int main(int c, char** a) {
 		printf("%2d:%03d -> %2d:%02d:%02d\n", v, m,r.Hour,r.Minute,r.Second);
 	}
 	//*/
-	for (unsigned char h = 0; h < 24; h++) for (unsigned char m = 0; m < 60; m++) for (unsigned char s = 0; s < 50; s++) {
+	//*
+	//for (unsigned char h = 0; h < 24; h++) for (unsigned char m = 0; m < 60; m++) for (unsigned char s = 0; s < 50; s++) {
+	for (unsigned char h = 0; h < 12; h++) for (unsigned char m = 0; m < 60; m++) for (unsigned char s = 0; s < 50; s++) {
 		TimePhantasar r = EarthToPhan(h, m, s);
 		if (s % 5 == 0) printf("\n");
 		printf("%2d:%02d:%02d -> %2d:%03d\t", h, m, s, r.Vecta, r.Millo);
 	}
 	printf("\n");
+	//*/
 }
