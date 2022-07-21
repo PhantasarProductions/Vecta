@@ -33,7 +33,7 @@ static const unsigned int Earth_Etmaal = 86400;
 static const unsigned int Phantasar_Etmaal = 20000;
 
 
-TimeEarth PhanToEarth(unsigned char v, unsigned int m) {
+TimeEarth PhanToEarth(unsigned int v, unsigned int m) {
 	TimeEarth ret;
 	unsigned int TotalMillo = (v * 1000) + m;
 	unsigned int TotalSecond = (int)(floor(((float)TotalMillo / (float)Phantasar_Etmaal) * (float)Earth_Etmaal));
@@ -48,7 +48,7 @@ TimeEarth PhanToEarth2(TimePhantasar t) {
 	return PhanToEarth(t.Vecta, t.Millo);
 }
 
-TimePhantasar EarthToPhan(unsigned char h, unsigned char m, unsigned char s) {
+TimePhantasar EarthToPhan(unsigned int h, unsigned int m, unsigned int s) {
 	TimePhantasar ret;
 	unsigned int TotalSeconds = s + (m * 60) + (h * 60 * 60);
 	unsigned int TotalMillo = (int)(floor(((float)TotalSeconds / (float)Earth_Etmaal) * (float)Phantasar_Etmaal));

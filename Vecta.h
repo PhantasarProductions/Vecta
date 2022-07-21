@@ -33,7 +33,7 @@ extern "C" {
 
 
 typedef struct TimeEarth {
-	unsigned char
+	unsigned int
 		Hour,
 		Minute,
 		Second;
@@ -44,10 +44,10 @@ typedef struct TimePhantsar {
 	unsigned char Vecta;
 } TimePhantasar;
 
-TimeEarth PhanToEarth(unsigned char v, unsigned int m);
+TimeEarth PhanToEarth(unsigned int v, unsigned int m);
 TimeEarth PhanToEarth2(TimePhantasar t);
 
-TimePhantasar EarthToPhan(unsigned char h, unsigned char m, unsigned char s);
+TimePhantasar EarthToPhan(unsigned int h, unsigned int m, unsigned int s);
 TimePhantasar EarthToPhan2(TimeEarth t);
 
 #ifdef __cplusplus
